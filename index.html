@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku - Game</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            height: 70px;
+            align-content: center;
+            text-align: center;
+        }
+
+        footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            background-color: black;
+            color: white;
+            height: 40px;
+            align-content: center;
+            text-align: center;
+        }
+        main{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .container {
+            margin: 50px auto;
+            width: 500px;
+            height: 500px;
+            background-color: rgb(28, 166, 190);
+            border: 1px black solid;
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0 0 20px black;
+        }
+        .boxs{
+            width: 99%;
+            height: 99%;
+            padding: 2px;
+            border: 1px black solid;
+            background-color: yellowgreen;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1%;
+            grid-template-rows: 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1%;
+        }
+        .small-box{
+            text-align: center;
+            margin: 2px;
+            padding: 2px;
+            font-size: 24px;
+            border: 2px black solid;
+            border-radius: 10px;
+            outline: none;
+            box-shadow: 0 0 7px inset black;
+        }
+
+        #btn{
+            font-size: 20px;
+            padding: 10px;
+            outline: none;
+            border: 1px black solid;
+            border-radius: 12px;
+            cursor: pointer;
+            background-color: pink;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #btn:active{
+            transform: scale(1.08);
+        }
+
+        @media screen and (max-width:550px) {
+            .container{
+                width: 350px;
+                height: 350px;
+            }
+            .small-box{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SUDOKU SOLVER</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="boxs">
+                
+            </div>
+        </div>
+        <p id="sms"></p>
+        <a href="index.html"><button id="btn" ><b>NEW</b></button></a>
+        <button id="btn" onclick="gridSolution()"><b>SUBMIT</b></button>
+    </main>
+    <footer>
+        <p><b>Copyright &copy 2017 SudokuSolver.com</b></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
